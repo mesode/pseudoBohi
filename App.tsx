@@ -1,19 +1,48 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import MainApp from './src/Main';
+import React, {Component} from 'react';
+import { StyleSheet, Text, View, Button } from 'react-native';
+import GlobalStyles from './src/GlobalStyles';
+import Start from './start';
 
-export default function App() {
-  return (
-    <MainApp />
-  );
+class App extends Component {
+  render(){
+    return (
+      <View style={{ flex:1 }}> 
+       <View style = {GlobalStyles.topPadding} />
+       <View style={styles.container}>
+           <Text style={styles.textGreet}>Hello! How are you doing?</Text>
+           <Text style={styles.textWelcome}>Welcome! To begin click on the button below!</Text>
+           <Start/>
+       </View>
+     </View>
+    );
+  }
+  
 }
 
-const styles = StyleSheet.create({
+export default App;
+
+const styles = StyleSheet.create ({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#48D1CC', 
+    justifyContent: 'center', 
+    alignItems: 'center' 
   },
+  textGreet: {
+    // flex: 1,
+    color: '#000000', 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    paddingTop: 200
+  },
+  textWelcome: {
+    color: '#EE0000', 
+    justifyContent: 'center', 
+    alignItems: 'center'
+  },
+  body: {
+    backgroundColor: '#48D1CC',
+  }
 });
+
