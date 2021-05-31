@@ -72,6 +72,8 @@ const styles = StyleSheet.create({
         height: 40,
     },
     submitButtonText:{
-        color: 'white'
+        color: 'white',
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 });
