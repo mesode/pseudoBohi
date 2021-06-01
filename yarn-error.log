@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/bin/node /usr/share/yarn/bin/yarn.js add react-native-gesture-handler@~1.10.2 react-native-reanimated@~2.1.0
+  /usr/bin/node /usr/share/yarn/bin/yarn.js add --offline react-native-gesture-handler@~1.10.2 react-native-reanimated@~2.1.0
 
 PATH: 
   /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
@@ -14,8 +14,12 @@ Platform:
   linux x64
 
 Trace: 
-  Error: connect EHOSTUNREACH 104.16.26.35:443
-      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1146:16)
+  Invariant Violation: There should only be one folder in a package cache (got  in /home/kelly/.cache/yarn/v6/npm-jsc-android-245459.0.0-integrity/node_modules)
+      at invariant (/usr/share/yarn/lib/cli.js:2314:15)
+      at /usr/share/yarn/lib/cli.js:60674:7
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:310:30)
+      at /usr/share/yarn/lib/cli.js:321:13
 
 npm manifest: 
   {

@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
 import {
-    View,
+    View, Button,
     Text,
     TouchableOpacity,
     StyleSheet
 } from 'react-native';
 
-const Welcome = () => {
-    const onPress = () => false;
+function Welcome ( navigation: { push: (arg0: string) => void; } ) {
+    const pressHandler = () => {
+      // navigation.navigate('Login');
+      navigation.push('Login');
+    }
     return(
         <View style={styles.container}>
            <Text style={styles.textGreet}>Hello! How are you doing?</Text>
            <Text style={styles.textWelcome}>Welcome! To begin click below.</Text>
-           <TouchableOpacity 
-                onPress = {onPress}>
+           <Button title="START"  onPress={pressHandler}/>
+           {/* <TouchableOpacity 
+                onPress = {pressHandler}>
                     <Text style={{color:'red'}}>START!</Text>
-           </TouchableOpacity>
+           </TouchableOpacity> */}
        </View> 
     );
 }
