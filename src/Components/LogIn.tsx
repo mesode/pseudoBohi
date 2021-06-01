@@ -6,26 +6,30 @@ import {
     TextInput, 
     StyleSheet } from 'react-native';
 
-class Login extends Component {
+// class Login extends Component {
+function Login ({ navigation }) {
     
-    state = {
+    const state = {
     email: '',
     password: ''
     }
 
-    handleEmail = (text: string) => {
-    this.setState({ email: text })
+    // handleEmail = (text: string) => {
+    // this.setState({ email: text })
+    // }
+
+    // handlePassword = (text: string) => {
+    // this.setState({ password: text })
+    // }
+
+    // login = (email: string, pass: string) => {
+    //     alert("email: " + email + "password: " + pass)
+    // }
+
+    const handlePress = () => {
+        navigation.navigate('First');
     }
 
-    handlePassword = (text: string) => {
-    this.setState({ password: text })
-    }
-
-    login = (email: string, pass: string) => {
-    alert('email: ' + email + ' password: ' + pass)
-    }
-
-    render(){
         return (
             <View style = {styles.container}>
                 <TextInput style = {styles.input}
@@ -33,25 +37,23 @@ class Login extends Component {
                     placeholder = "Email"
                     placeholderTextColor = "#9a73ef"
                     autoCapitalize = "none"
-                    onChangeText = {this.handleEmail}
+                    // onChangeText = {this.handleEmail}
                 />
                 <TextInput style = {styles.input}
                     underlineColorAndroid = "transparent"
                     placeholder = "Password"
                     placeholderTextColor = "#9a73ef"
                     autoCapitalize = "none"
-                    onChangeText = {this.handlePassword}
+                    // onChangeText = {this.handlePassword}
                 />
                 <TouchableOpacity
                     style = {styles.submitButton}
-                    onPress = {
-                    () => this.login(this.state.email, this.state.password)}>
+                    onPress = {handlePress}>
                     <Text 
                     style = {styles.submitButtonText}> Submit </Text>
                 </TouchableOpacity>
             </View>
         );
-    }
 }
 export default Login;
 

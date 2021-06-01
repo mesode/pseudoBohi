@@ -4,6 +4,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 import Welcome from './Welcome';
 import Login from './LogIn';
+import First from './First';
 
 const screens = {
     Welcome: {
@@ -11,6 +12,9 @@ const screens = {
     },
     Login: {
         screen: Login
+    },
+    First: {
+        screen: First
     }
 }
 

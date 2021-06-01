@@ -4,6 +4,7 @@ import { View } from 'react-native';
 import GlobalStyles from './src/GlobalStyles';
 import Login from './src/Components/LogIn';
 import Welcome from './src/Components/Welcome';
+import First from './src/Components/First';
 import AppContainer from './src/Components/Nav';
 import 'react-native-gesture-handler';
 
