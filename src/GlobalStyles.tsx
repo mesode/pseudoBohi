@@ -10,7 +10,7 @@ const GlobalStyles = StyleSheet.create ({
     container: {
         backgroundColor: '#48D1CC', 
         justifyContent: 'center', 
-        alignItems: 'center' 
+        alignItems: 'center', 
     },
     textGreet: {
         color: '#000000', 

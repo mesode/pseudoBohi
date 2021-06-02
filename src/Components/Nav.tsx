@@ -4,7 +4,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 import Welcome from './Welcome';
 import Login from './LogIn';
-import First from './First';
+import First from './AppScreens/First';
 
 const screens = {
     Welcome: {
