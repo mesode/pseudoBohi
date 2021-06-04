@@ -3,7 +3,7 @@ import {
     StyleSheet,
     Text,
     View,
-    ScrollView
+ 
 } from 'react-native';
 import AccView from './accView';
 

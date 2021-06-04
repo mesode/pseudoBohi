@@ -11,6 +11,7 @@ import ListAccount from './listAccounts';
 const AccView: FC = () => {
 
     const [ accounts, setAccounts ] = useState<Account[] | null>(null);
+    // const [ accounts, setAccounts ] = useState<null>; /*| null>(null);*/
     
     return(
         
