@@ -8,23 +8,23 @@ import {
 import { Account, Accounts } from '../Accounts';
 import ListAccount from './listAccounts';
 
-const AccView: FC = () => {
+function AccView ({navigation}) => {
 
-    const [ accounts, setAccounts ] = useState<Account[] | null>(null);
+// const AccView: FC = ({navigation}) => {
+
+    // const [ accounts, setAccounts ] = useState<Account[] | null>(null);
     // const [ accounts, setAccounts ] = useState<null>; /*| null>(null);*/
     
     return(
-        
-            <FlatList 
-                data={accounts} 
-                renderItem={({ item }) => ( 
-                    <ListAccount id={item.id} 
-                             accName={item.accName} 
-                             accBalance={item.accBalance}
-                    />
-                )} 
-            />
-        
+        <FlatList 
+            data={Accounts} 
+            renderItem={({ item }) => ( 
+                <ListAccount id={item.id} 
+                    accName={item.accName} 
+                    accBalance={item.accBalance}
+                />
+            )} 
+        />
     );
 }
 export default AccView;

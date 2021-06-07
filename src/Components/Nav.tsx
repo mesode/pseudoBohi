@@ -5,6 +5,9 @@ import { createAppContainer } from 'react-navigation';
 import Welcome from './Welcome';
 import Login from './LogIn';
 import First from './AppScreens/First';
+import Second from './AppScreens/Second';
+import AccView from './AppScreens/accView';
+import ListAccount from './AppScreens/listAccounts';
 
 const screens = {
     Welcome: {
@@ -13,9 +16,12 @@ const screens = {
     Login: {
         screen: Login
     },
-    First: {
-        screen: First
+    Accounts: {
+        screen: ListAccount
     }
+    // Second: {
+    //     screen: Second
+    // }
 }
 
 const HomeStack = createStackNavigator(screens);

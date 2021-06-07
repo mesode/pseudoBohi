@@ -5,14 +5,12 @@ import {
     View,
  
 } from 'react-native';
-import AccView from './accView';
 
 export default function First () {
     
     return(
             <View>
                 <Text> My Dashboard </Text>
-                <AccView />
             </View>
     );
 }
